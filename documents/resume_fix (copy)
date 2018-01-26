@@ -1,0 +1,126 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%https://www.overleaf.com/13430296htwmqzcvcrfv#
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.90]{geometry}
+\setlength{\hintscolumnwidth}{1cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+% personal data
+\name{Eric}{Sheen}
+\address{22 Arpege way NW, Atlanta, GA, 30327}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+8145715952}                   % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{esheen3@gatech.edu}                               % optional, remove / comment the line if not wanted
+\homepage{eric1e.github.io}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\begin{itemize}
+
+\item{\cventry{August 2013--December 2018}{B.S. Computer Science, Network and Modeling Simulation}{Georgia Institute of Technology}{Atlanta, GA}{}{\textit{}}}
+\end{itemize}
+
+\section{Projects}
+
+\begin{itemize}
+\item{\cventry{2017--Present}{Integrate IoT device with Bobby Dodd stadium}{E-Stadium}{Atlanta, GA}{}{{Programmed MSP-430 with \textbf{Matlab} and \textbf{C}}\\{Developed the IoT device that analyzes the vibration generated in the stadium}}{\textit{}}}
+
+\item{\cventry{November 2017}{Implemented a client and server for Hangman game using \textbf{Python}}{Hangman}{Atlanta, GA}{}{\textit{}}}
+
+\item{\cventry{May 2017–August 2017}{Developed android app that can find the lost phones using \textbf{Java} and \textbf{Firebase}}{Where’s My Stuff? Application }{Atlanta, GA}{}{Debugged the app with \textbf{Junit} for proper functioning}{\textit{}}}
+
+\item{\cventry{August 2016–December 2016}{Implemented malloc and free algorithm using \textbf{C}}{Malloc Emulator}{Atlanta, GA}{}{\textit{}}}
+
+\end{itemize}
+
+\section{Work Experience}
+\begin{itemize}
+
+\item{\cventry{November 2015 – April 2016}{Intern}{JUSTEK Inc.}{Pyeongtaek Si, South Korea}{}{\vspace{3pt}– Developed a basic GUI for a motor controlling application using Visual Studio to enhance efficiency \\ – Developed a software that updates the serial numbers of products using VBA macro in Microsoft Excel for faster tracking}{}}
+\vspace{1pt}
+\item{\cventry{May 2015 – July 2015}{Shell Tutor}{Georgia Institute of Technology, College of Engineering}{Atlanta, GA}{}{– Tutored statics for Mechanical Engineering to ensure students could understand class contents}}
+
+\end{itemize}
+
+\section{Skills}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} Java, C, Python, Javascript, HTML
+\item \textbf{Tools: }Linux, Android Studio, Git, GDB, Matlab, Scikit-learn
+
+
+\end{itemize}
+
+\section{Activities}
+
+\begin{itemize}
+
+\item{\cventry{}{Member}{GreyHat Information Security Club}{member since May 2017}{}{\vspace{3pt}Discuss security topics and events weekly \\ Participated on NetKotH CTF security competition event}{}}
+
+\item{\cventry{}{Member}{LUG@GT}{member since May 2017}{}{\vspace{3pt}Educate people on basic of linux and how to use it}}
+
+\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
+
